@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오시는길/상담문의 | 리얼IT전당포</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="sticky-top">
+<div class="legal-bar">
+  <div class="container">리얼아이티전당포대부 <span class="reg-blank">[대부업 등록번호 등록 예정]</span></div>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/img/logo.png" alt="리얼IT전당포 로고">
+      <span>리얼IT전당포</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">홈</a>
+      <a href="about.html">회사소개</a>
+      <a href="items.html">취급품목</a>
+      <a href="process.html">대출절차</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">오시는길/상담</a>
+    </nav>
+    <a href="tel:1877-3989" class="nav-cta">📞 1877-3989</a>
+  </div>
+</header>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow" style="color:#4fc0f5;">CONTACT</div>
+    <h1>오시는길 / 상담문의</h1>
+    <p>전화, 카카오톡, 상담 폼 중<br>편하신 방법으로 문의해주세요.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info-card">
+        <h3>상담 채널</h3>
+        <dl>
+          <dt>업체명</dt><dd>리얼아이티 전당포 대부</dd>
+          <dt>대표</dt><dd>김유진</dd>
+          <dt>전화</dt><dd><a href="tel:1877-3989">1877-3989</a></dd>
+          <dt>주소</dt><dd>인천광역시 미추홀구 인중로 9,<br>원흥빌딩 505호</dd>
+          <dt>사업자등록번호</dt><dd class="reg-blank" style="color:#c9a45c;">[등록 예정]</dd>
+        </dl>
+        <a href="#" class="btn btn-primary kakao-btn">카카오톡 상담하기</a>
+        <!-- TODO: 카카오톡 채널 개설 후 실제 채널 링크(pf.kakao.com/...)로 교체 -->
+      </div>
+
+      <div class="col-form">
+        <div class="eyebrow">CONSULT FORM</div>
+        <h2 style="margin-bottom:20px;">상담 신청서</h2>
+        <p class="lead" style="margin-bottom:24px;">이름, 연락처, 상담 희망 품목만 남겨주시면<br>순차적으로 연락드립니다.<br>
+          담보물 사진이나 상세 금액 상담은 카카오톡으로 진행해주세요.</p>
+
+        <!-- ================= 상담 신청 폼 =================
+             구글폼 데이터로 직접 전송 (iframe 아님) — 디자인은 사이트 톤 그대로,
+             제출 시 fetch(no-cors)로 구글폼 formResponse 엔드포인트에 전송됩니다.
+             구글폼 자체 응답 시트에 그대로 쌓여요.
+        ========================================================= -->
+        <form class="cf-form" id="consultForm">
+          <div class="cf-row">
+            <div class="cf-group">
+              <label class="cf-label">이름 <span>*</span></label>
+              <input class="cf-input" type="text" name="entry.1214406524" required>
+            </div>
+            <div class="cf-group">
+              <label class="cf-label">연락처 <span>*</span></label>
+              <input class="cf-input" type="tel" name="entry.460402613" placeholder="010-0000-0000" required>
+            </div>
+          </div>
+
+          <div class="cf-group cf-full">
+            <label class="cf-label">상담 희망 품목 <span>*</span></label>
+            <div class="cf-radio-grid">
+              <label class="cf-radio"><input type="radio" name="cf-item" value="스마트폰" required><span>스마트폰</span></label>
+              <label class="cf-radio"><input type="radio" name="cf-item" value="태블릿"><span>태블릿</span></label>
+              <label class="cf-radio"><input type="radio" name="cf-item" value="카메라/ 렌즈"><span>카메라·렌즈</span></label>
+              <label class="cf-radio"><input type="radio" name="cf-item" value="게임기"><span>게임기</span></label>
+              <label class="cf-radio"><input type="radio" name="cf-item" value="컴퓨터"><span>컴퓨터</span></label>
+              <label class="cf-radio cf-radio-other"><input type="radio" name="cf-item" value="__other_option__"><span>기타</span>
+                <input class="cf-input cf-other-input" type="text" id="cfOtherText" placeholder="직접 입력">
+              </label>
+            </div>
+          </div>
+
+          <div class="cf-group cf-full">
+            <label class="cf-label">희망 연락시간</label>
+            <input class="cf-input" type="text" name="entry.1325150738" placeholder="예) 8/30, 오후 7시">
+          </div>
+
+          <div class="cf-group cf-full">
+            <label class="cf-label">문의 내용</label>
+            <textarea class="cf-textarea" name="entry.2060781702"></textarea>
+          </div>
+
+          <p class="cf-notice">신청 후 담당자가 확인 후 개별 연락드립니다.<br>담보물 사진이나 상세 금액 상담은 카카오톡으로 진행해주세요.</p>
+
+          <button class="cf-submit" type="submit">상담 신청하기</button>
+        </form>
+
+        <div class="cf-done" id="cfDone">
+          <div class="cf-done-ico">✓</div>
+          <p class="cf-done-title">신청이 완료되었습니다</p>
+          <p class="cf-done-desc">빠른 시일 내에 담당자가 확인 후 연락드리겠습니다.</p>
+        </div>
+
+        <script>
+        (function () {
+          var GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdrGTcwspsFua8NdhHUB83rojWX2610P4IJR6xF9-xbNrP2Hw/formResponse";
+          var ITEM_ENTRY = "entry.1088214775";
+
+          var form = document.getElementById("consultForm");
+          var done = document.getElementById("cfDone");
+          if (!form) return;
+
+          // 라디오 선택 시 chip 스타일 토글
+          var radios = form.querySelectorAll('input[name="cf-item"]');
+          radios.forEach(function (r) {
+            r.addEventListener("change", function () {
+              radios.forEach(function (o) { o.closest(".cf-radio").classList.remove("is-checked"); });
+              r.closest(".cf-radio").classList.add("is-checked");
+            });
+          });
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var btn = form.querySelector(".cf-submit");
+            btn.disabled = true; btn.textContent = "전송 중...";
+
+            var data = new FormData(form);
+            var checked = form.querySelector('input[name="cf-item"]:checked');
+            if (checked) {
+              data.append(ITEM_ENTRY, checked.value);
+              if (checked.value === "__other_option__") {
+                var otherText = document.getElementById("cfOtherText").value;
+                data.append(ITEM_ENTRY + ".other_option_response", otherText);
+              }
+            }
+
+            fetch(GOOGLE_FORM_ACTION, { method: "POST", mode: "no-cors", body: data })
+              .then(function () {
+                form.style.display = "none";
+                done.style.display = "block";
+              })
+              .catch(function () {
+                btn.disabled = false; btn.textContent = "상담 신청하기";
+                alert("전송 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.");
+              });
+          });
+        })();
+        </script>
+
+        <div class="map-block">
+          <!-- 카카오맵(다음 지도) 퍼가기 -->
+          <div id="daumRoughmapContainer1785806216716" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+          <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+          <script charset="UTF-8">
+            new daum.roughmap.Lander({
+              "timestamp" : "1785806216716",
+              "key" : "2gjbp5d9rox3",
+              "mapWidth" : "640",
+              "mapHeight" : "360"
+            }).render();
+          </script>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="legal-cards">
+      <div class="legal-cards-head">
+        <div class="eyebrow" style="color:var(--blue-400);">REAL IT</div>
+        <h3>리얼IT전당포 안내</h3>
+        <p>아래 정보는 서비스 운영 및 대부업 관련 고지사항입니다.<br>이용 전 반드시 내용을 확인해 주세요.</p>
+      </div>
+      <div class="legal-cards-grid">
+        <div class="legal-card">
+          <h4>대부사업자 정보</h4>
+          <p><strong>대부사업자:</strong> 리얼아이티 전당포 대부</p>
+          <p><strong>대표:</strong> 김유진</p>
+          <p><strong>주소:</strong> 인천광역시 미추홀구 인중로 9, 원흥빌딩 505호</p>
+          <p><strong>Tel:</strong> <a href="tel:1877-3989">1877-3989</a></p>
+          <p><strong>대부업등록번호:</strong> <span class="reg-blank">[등록 예정]</span></p>
+        </div>
+        <div class="legal-card">
+          <h4>이자율 및 유의사항</h4>
+          <p><strong>이자율:</strong> 월 1.66% 이내 / 법정금리 연 20% 이내 / 연체이자율 연 20% 이내<br>(법정금리 초과 연체금리 없음, 취급수수료·조기상환수수료 등 없음)</p>
+          <p class="legal-warn">※ 이자 외 별도로 중개수수료를 수취하는 것은 불법이며, 과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.</p>
+          <p class="legal-warn">※ 대출 시 귀하의 신용등급 또는 개인신용평점이 하락할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/logo.png" alt="">
+          <span>리얼IT전당포</span>
+        </div>
+        <p class="footer-tagline">스마트폰·노트북·카메라 등 IT기기 전문 전당·매입 서비스</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="about.html">회사소개</a>
+        <a href="items.html">취급품목</a>
+        <a href="process.html">대출절차</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">오시는길/상담</a>
+      </nav>
+    </div>
+    <p class="legal-footnote">© 2026 리얼아이티 전당포 대부. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<a href="#" class="kakao-float" target="_blank" rel="noopener" aria-label="카카오톡 상담하기">
+  <span>카톡 상담</span>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
